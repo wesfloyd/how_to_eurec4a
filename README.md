@@ -1,14 +1,24 @@
 # How to EUREC4A
 
-EUREC4A offers a wealth of data!
-This book shall provide some help in finding and working with different datasets. Example scripts mainly show the access and basic plots of dataset variables.
+[EUREC4A](https://eurec4a.eu/), the Field Study, is an international initiative in support of the World Climate Research Programme's Grand Science Challenge on Clouds, Circulation and Climate Sensitivity. EUREC4A will take place between 20 January and 20 February 2020 with operations based out of Barbados. 
 
-**The most recent version of the book is linked [here](https://howto.eurec4a.eu/).**
+EUREC4A aims at advancing understanding of the interplay between clouds, convection and circulation and their role in climate change: How resilient or sensitive is the shallow cumulus cloud amount to variations in the strength of convective mixing, surface turbulence and large-scale circulations?
 
-## Contributing
+Different instruments, by virtue of their differing measurement principle and footprint, see clouds in different ways. To provide an overview of the cloud fields sampled by HALO during EUREC4A, a cloud mask is created for each cloud sensitive instrument.
 
-This is a project from the community for you and for the community and it is under constant improvement. Everyone is welcome to contribute with scripts, ideas, suggestions, by opening issues and making pull requests. More details can be found [here](CONTRIBUTING.md).
+[Original EUREC4A workload in github](https://github.com/eurec4a/how_to_eurec4a/blob/master/how_to_eurec4a/cloudmasks.md)
 
-## Credits
 
-This project is created using the excellent open source [Jupyter Book project](https://jupyterbook.org/) and the [executablebooks/cookiecutter-jupyter-book template](https://github.com/executablebooks/cookiecutter-jupyter-book).
+# Running the demo
+
+
+To run on [Bacalhau](https://github.com/filecoin-project/bacalhau):
+
+```
+bacalhau docker run \
+  wesfloyd/bacalwow:eurec4a-analysis-v2 \
+  -- /home/how_to_eurec4a/start-analysis
+bacalhau list
+bacalhau describe [JOB_ID]
+bacalhau get [JOB_ID]
+```
